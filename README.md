@@ -1,11 +1,17 @@
 
-# (￣へ￣) C Lab PHYCOM
+# (￣へ￣) C Lab Phycom
 
 <img src="https://media1.tenor.com/m/geSFdExOq-wAAAAd/stdio-stdioh.gif" alt="animated bold text" width="400"/>
 
 This repository contains the source code for my **PHYSICAL COMPUTING (PHYCOM)** labs at the Faculty of Information Technology (KMITL) so I don't have to use Google drive.
 
 ---
+## Pls help I confused using VIM 😭🙏
+
+<img src="https://media1.tenor.com/m/FGmeK_2r6jUAAAAd/denia-wuwa.gif" alt="denia confused" width="600"/>
+
+---
+
 <img src="https://media1.tenor.com/m/9Wv5g8uNqHgAAAAd/denia-wuthering-waves.gif" alt="denia loading" width="400"/>
 
 ## 📂 World Map (Project Structure)
