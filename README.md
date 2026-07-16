@@ -24,7 +24,7 @@ Going in to folder (if I forgot where my file where for some reason)
 `next` --> go to next line (Step OVER functions, skip the boring details)  
 `step` --> dive INTO the function line-by-line  
 `run` --> it just run man what did u expect man???  
-`break` --> R u for real man... (Stop at **before** the line u input like input *15* break at line *14*) 
+`break` --> R u for real man... (Code will stop **before** the line u input, like, input *15* it will break at line *14*) 
 
 ---
 
