@@ -1,12 +1,12 @@
 
 # (￣へ￣) C Lab PHYCOM
 
-<img src="https://tenor.com/th/view/stdio-stdioh-c-programming-vscode-gif-9359752660125658092" alt="animated bold text" width="400"/>
+<img src="https://media1.tenor.com/m/geSFdExOq-wAAAAd/stdio-stdioh.gif" alt="animated bold text" width="400"/>
 
 This repository contains the source code for my **PHYSICAL COMPUTING (PHYCOM)** labs at the Faculty of Information Technology (KMITL) so I don't have to use Google drive.
 
 ---
-<img src="https://tenor.com/vexnbsirodo.gif" alt="denia loading" width="400"/>
+<img src="https://media1.tenor.com/m/9Wv5g8uNqHgAAAAd/denia-wuthering-waves.gif" alt="denia loading" width="400"/>
 
 ## 📂 World Map (Project Structure)
 
@@ -31,9 +31,9 @@ For-lab-Phycom/
 ```
 
 ---
-## U think that there more? Nah bro it not!
+## U think there more? Nah bro there not thing down here!
 
-<img src="https://media1.tenor.com/th/view/denia-denia-wuwa-gif-16699651612001979673" alt="denia haha" width="400"/>
+<img src="https://media1.tenor.com/m/58EUqZ4oTRkAAAAd/denia-denia-wuwa.gif" alt="denia haha" width="400"/>
 
 ---
 ## IDK what to wrote next, might add later, Thx
