@@ -6,7 +6,7 @@
 This repository contains the source code for my **PHYSICAL COMPUTING (PHYCOM)** labs at the Faculty of Information Technology (KMITL) so I don't have to use Google drive.
 
 ---
-<img src="https://tenor.com/th/view/denia-wuthering-waves-wuwa-denia-wuwa-loading-gif-17684502706251475064" alt="denia loading" width="400"/>
+<img src="https://tenor.com/vexnbsirodo.gif" alt="denia loading" width="400"/>
 
 ## 📂 World Map (Project Structure)
 
@@ -33,7 +33,7 @@ For-lab-Phycom/
 ---
 ## U think that there more? Nah bro it not!
 
-<img src="https://tenor.com/th/view/denia-denia-wuwa-gif-16699651612001979673" alt="denia haha" width="400"/>
+<img src="https://media1.tenor.com/th/view/denia-denia-wuwa-gif-16699651612001979673" alt="denia haha" width="400"/>
 
 ---
 ## IDK what to wrote next, might add later, Thx
