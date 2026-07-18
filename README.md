@@ -6,6 +6,30 @@
 This repository contains the source code for my **PHYSICAL COMPUTING (PHYCOM)** labs at the Faculty of Information Technology (KMITL) so I don't have to use Google drive.
 
 ---
+## How to creat and debug vim file.C001
+
+<img src="https://media1.tenor.com/m/4qIz-GOR9nMAAAAC/denia-denia-wuwa.gif" alt="denia shaking" width="400"/>
+
+```bash
+# 1. เขียน/แก้โค้ดด้วย vim
+vim main.c
+ 
+# 2. Compile พร้อม flag -g (ขาดไม่ได้ ไม่งั้น debug ไม่ได้)
+gcc -g main.c -o main
+ 
+# 3. เปิด gdb
+gdb main
+```
+ 
+### เข้าโหมด TUI (แบ่งจอเห็นโค้ด — แนะนำให้ใช้ตลอด)
+ 
+```
+Ctrl + x   แล้วตามด้วย   a
+```
+ 
+กดซ้ำได้เพื่อสลับเข้า/ออก TUI ตลอดเวลา (ใช้ได้เสถียรกว่าเปิดด้วย `gdb --tui` ตรงๆ บน Cygwin/mintty)
+
+---
 ## Pls help I confused using VIM 😭🙏
 
 <img src="https://media1.tenor.com/m/FGmeK_2r6jUAAAAd/denia-wuwa.gif" alt="denia confused" width="600"/>
@@ -20,11 +44,12 @@ Going in to folder (if I forgot where my file where for some reason)
 `gcc -g` **file_name**.c `-o` **file_name**.exe -> compile file  
 `gdb --tui` **file_name** --> debug mode  
 
+`info break` --> `i b` check break point info  
 `info local` --> show local variables (let me see what values I got rn)  
-`next` --> go to next line (Step OVER functions, skip the boring details)  
-`step` --> dive INTO the function line-by-line  
-`run` --> it just run man what did u expect man???  
-`break` --> R u for real man... (Code will stop **before** the line u input, like, input *15* it will break at line *14*) 
+`next` --> `n` go to next line (Step OVER functions, skip the boring details)  
+`step` --> `s` dive INTO the function line-by-line  
+`run` --> `r` it just run man what did u expect man???  
+`break` --> `b` R u for real man... (Code will stop **before** the line u input, like, input *15* it will break at line *14*) 
 
 ---
 
