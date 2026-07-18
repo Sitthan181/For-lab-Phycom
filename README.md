@@ -11,23 +11,23 @@ This repository contains the source code for my **PHYSICAL COMPUTING (PHYCOM)** 
 <img src="https://media1.tenor.com/m/4qIz-GOR9nMAAAAC/denia-denia-wuwa.gif" alt="denia shaking" width="400"/>
 
 ```bash
-# 1. เขียน/แก้โค้ดด้วย vim
+# 1. Creat/Edit vim file.c
 vim main.c
  
-# 2. Compile พร้อม flag -g (ขาดไม่ได้ ไม่งั้น debug ไม่ได้)
+# 2. Compile with flag -g (it gcc -g + filename.c + -o + filename that gonna be .exe)
 gcc -g main.c -o main
  
-# 3. เปิด gdb
+# 3. Open gdb
 gdb main
 ```
  
-### เข้าโหมด TUI (แบ่งจอเห็นโค้ด — แนะนำให้ใช้ตลอด)
+### Entering TUI (It just IDE UI but in vim)
  
 ```
-Ctrl + x   แล้วตามด้วย   a
+Ctrl + x  followed by  a
 ```
  
-กดซ้ำได้เพื่อสลับเข้า/ออก TUI ตลอดเวลา (ใช้ได้เสถียรกว่าเปิดด้วย `gdb --tui` ตรงๆ บน Cygwin/mintty)
+You can spam this to toggle TUI mode in and out anytime. (Way more stable than brute-forcing `gdb --tui` directly on Cygwin/mintty ngl)
 
 ---
 ## Pls help I confused using VIM 😭🙏
@@ -37,19 +37,26 @@ Ctrl + x   แล้วตามด้วย   a
 Going in to folder (if I forgot where my file where for some reason)  
 `cd /cygdrive/e/KMITL/Year_2/Physic_Com/It_all_C/quiz`  
 
-### 💻 Basic command
-`ls` --> check file  
-`cd` **path_file**/... --> in to file / folder  
-`vim` **file_name**.c --> creat file  
-`gcc -g` **file_name**.c `-o` **file_name**.exe -> compile file  
-`gdb --tui` **file_name** --> debug mode  
+```bash
+# ==============================================================================
+# 💻 Basic Command Survival Guide
+# ==============================================================================
 
-`info break` --> `i b` check break point info  
-`info local` --> show local variables (let me see what values I got rn)  
-`next` --> `n` go to next line (Step OVER functions, skip the boring details)  
-`step` --> `s` dive INTO the function line-by-line  
-`run` --> `r` it just run man what did u expect man???  
-`break` --> `b` R u for real man... (Code will stop **before** the line u input, like, input *15* it will break at line *14*) 
+# [Command]                   [Shortcut]    [What it actually does]
+ls                            -             # check files in current dir
+cd path_file/                 -             # go in to file / folder
+vim file_name.c               -             # create or edit file
+gcc -g file.c -o file.exe     -             # compile file 
+gdb --tui file_name           -             # debug mode (UI might break lol)
+
+# --- GDB Mode ---
+info break                    i b           # check break point info
+info local                    i loc         # show local variables (let me see what values I got rn)
+next                          n             # go to next line (Step OVER functions, skip the boring details)
+step                          s             # dive INTO the function line-by-line
+run                           r             # it just run man what did u expect man???
+break [line]                  b [line]      # R u for real man... (Code stops BEFORE the line u input, e.g., input 15 stops at 14)
+```
 
 ---
 
