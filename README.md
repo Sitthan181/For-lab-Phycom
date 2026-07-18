@@ -27,7 +27,7 @@ gdb main
 Ctrl + x  followed by  a
 ```
  
-You can spam this to toggle TUI mode in and out anytime. (Way more stable than brute-forcing `gdb --tui` directly on Cygwin/mintty ngl)
+You can spam this to toggle TUI mode in-aNd-out anytime. (Way more stable than brute-forcing `gdb --tui` directly on Cygwin/mintty ngl)
 
 ---
 ## Pls help I confused using VIM 😭🙏
@@ -37,17 +37,15 @@ You can spam this to toggle TUI mode in and out anytime. (Way more stable than b
 Going in to folder (if I forgot where my file where for some reason)  
 `cd /cygdrive/e/KMITL/Year_2/Physic_Com/It_all_C/quiz`  
 
-```bash
-# ==============================================================================
-# 💻 Basic Command Survival Guide
-# ==============================================================================
+## 💻 Basic Command Survival Guide
 
+```bash
 # [Command]                   [Shortcut]    [What it actually does]
 ls                            -             # check files in current dir
 cd path_file/                 -             # go in to file / folder
 vim file_name.c               -             # create or edit file
 gcc -g file.c -o file.exe     -             # compile file 
-gdb --tui file_name           -             # debug mode (UI might break lol)
+gdb --tui file_name           -             # debug mode (Just go use gdb file_name -> ctrl + x -> a | it alot ezer)
 
 # --- GDB Mode ---
 info break                    i b           # check break point info
@@ -55,7 +53,7 @@ info local                    i loc         # show local variables (let me see w
 next                          n             # go to next line (Step OVER functions, skip the boring details)
 step                          s             # dive INTO the function line-by-line
 run                           r             # it just run man what did u expect man???
-break [line]                  b [line]      # R u for real man... (Code stops BEFORE the line u input, e.g., input 15 stops at 14)
+break [line]                  b [line]      # Code stops BEFORE the line u input, e.g., input 15 stops at 14
 ```
 
 ---
@@ -64,7 +62,7 @@ break [line]                  b [line]      # R u for real man... (Code stops BE
 
 ## 📂 World Map (Project Structure)
 
-This is where things were.
+This is where things were. also some.md were not in place cause it my mark for what quiz/lab does, what I learned
 
 ```text
 For-lab-Phycom/
