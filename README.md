@@ -41,7 +41,7 @@ Going in to folder (if I forgot where my file where for some reason)
 
 For input entire line  
 `%[^\n]`  
-Ex  
+Ex :  
 ```c
     char Z[101];
     scanf(" %[^\n]", Z);
