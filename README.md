@@ -37,6 +37,29 @@ You can spam this to toggle TUI mode in-aNd-out anytime. (Way more stable than b
 Going in to folder (if I forgot where my file where for some reason)  
 `cd /cygdrive/e/KMITL/Year_2/Physic_Com/It_all_C/quiz`  
 
+## ⌨️ How to input things properly without crying
+
+For input entire line  
+`%[^\n]`  
+Ex  
+```c
+    char Z[101];
+    scanf(" %[^\n]", Z);
+    printf("%s", Z);
+```
+
+When inputting, if it's not string (`%s`) need to use `&`. if it IS a string ya need to give it max size it can hold. using `[]`  
+```c
+    char a[*how much bytes it can hold];
+    int b;
+    float c;
+    scanf("%s", a);
+    scanf("%d", &b);
+    scanf("%f", &c);
+    printf("%s\n", a);
+    printf("%d %f", b, c);
+```  
+
 ## 💻 Basic Command Survival Guide
 
 ```bash
