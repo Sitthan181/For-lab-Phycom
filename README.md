@@ -76,6 +76,7 @@ info local                    i loc         # show local variables (let me see w
 next                          n             # go to next line (Step OVER functions, skip the boring details)
 step                          s             # dive INTO the function line-by-line
 run                           r             # it just run man what did u expect man???
+print                         p             # it print but shoter
 break [line]                  b [line]      # Code stops BEFORE the line u input, e.g., input 15 stops at 14
 ```
 
