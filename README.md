@@ -54,8 +54,10 @@ When inputting, if it's not string (`%s`) need to use `&`. if it IS a string ya 
     int b;
     float c;
     scanf("%s", a);
+    scanf("%c", a);       // for 1 char
     scanf("%d", &b);
     scanf("%f", &c);
+    printf("%c\n", a);    // for 1 char
     printf("%s\n", a);
     printf("%d %f", b, c);
 ```  
@@ -164,6 +166,48 @@ int main() {
     }
 
     return 0;
+}
+```
+
+### Function Structure
+
+**Note** do "Function Prototype" first so code won't error
+which is smth like this
+```c
+// ==========================================
+// Function Syntax
+// ReturnType functionName(ParameterType name);
+// ==========================================
+//Ex:
+#include <stdio.h>
+
+// 1. PROTOTYPES (Declare them here!)
+int getNum(void);       // Takes nothing, returns an int
+int sqr(int x);         // Takes an int, returns an int
+void printOne(int x);   // Takes an int, returns NOTHING (void)
+
+// 2. MAIN FUNCTION
+int main() {
+    int a = getNum();
+    int b = sqr(a);
+    printOne(b);
+    return 0;
+}
+
+// 3. THE ACTUAL FUNCTIONS (Write what they do down here)
+int getNum(void) {
+    int numIn;
+    scanf("%d", &numIn);
+    return numIn;
+}
+
+int sqr(int x) {
+    return x * x;
+}
+
+void printOne(int x) {
+    printf("The value is: %d\n", x);
+    // No return needed because the type is 'void'
 }
 ```
 
