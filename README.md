@@ -19,6 +19,11 @@ gcc -g main.c -o main
  
 # 3. Open gdb
 gdb main
+ 
+# 3.5 For Just Run the code
+./ main
+ 
+# **NOTE!! main stand for file name (Can be change)
 ```
  
 ### Entering TUI (It just IDE UI but in vim)
@@ -172,6 +177,7 @@ int main() {
 ### Function Structure
 
 **Note** do "Function Prototype" first so code won't error
+
 which is smth like this
 ```c
 // ==========================================
