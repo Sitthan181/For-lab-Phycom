@@ -1,0 +1,4 @@
+https://drive.google.com/drive/folders/1ebZ_ti9Ji9oLrJHIm0oo9onMqoGFRDze?usp=sharing 
+https://drive.google.com/drive/folders/1-V2UP0KFHTiU2gzTPZK73Yu5Rb9rBonW?usp=sharing
+tinkercad.com
+ถ้าสอบด้วยคอมของห้อง เช็กว่าลง library MQTT (ของ Joel Gaehwiler) ไว้แล้วหรือยัง เพราะการติดตั้งผ่าน Library Manager ต้องใช้เน็ต

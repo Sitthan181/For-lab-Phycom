@@ -1,0 +1,65 @@
+// C++ code
+//
+int numTable[10][7] = {
+      {1, 1, 1, 1, 1, 1, 0}, // เลข 0
+      {0, 1, 1, 0, 0, 0, 0}, // เลข 1
+      {1, 1, 0, 1, 1, 0, 1}, // เลข 2
+      {1, 1, 1, 1, 0, 0, 1}, // เลข 3
+      {0, 1, 1, 0, 0, 1, 1}, // เลข 4
+      {1, 0, 1, 1, 0, 1, 1}, // เลข 5
+      {1, 0, 1, 1, 1, 1, 1}, // เลข 6
+      {1, 1, 1, 0, 0, 0, 0}, // เลข 7
+      {1, 1, 1, 1, 1, 1, 1}, // เลข 8
+      {1, 1, 1, 1, 0, 1, 1}  // เลข 9
+    };
+
+int segPins[7] = {0, 1, 2, 3, 4, 5, 6}; // a,b,c,d,e,f,g
+int digitPins[2] = {10, 11};            // 0 = ซ้าย, 1 = ขวา
+
+int number[8] = {6, 8, 0, 7, 0, 1, 8, 1}; // เลขที่จะโชว์: 6807
+
+void setup()
+{
+  for (int i = 0; i < 7; i++) {
+    pinMode(segPins[i], OUTPUT);
+  }
+  for (int i = 0; i < 2; i++) {
+    pinMode(digitPins[i], OUTPUT);
+    digitalWrite(digitPins[i], HIGH); // ปิดไว้ก่อน (common cathode: LOW = ติด)
+  }
+}
+
+void showDigit(int num)
+{
+  for (int i = 0; i < 7; i++) {
+    digitalWrite(segPins[i], numTable[num][i]);
+  }
+}
+
+// โชว์เลข 2 ตัวพร้อมกันด้วยการสลับไฟเร็ว ๆ เป็นเวลา duration_ms
+void displayPair(int left, int right, unsigned long duration_ms)
+{
+  unsigned long start = millis();
+  while (millis() - start < duration_ms) {
+    // หลักซ้าย
+    digitalWrite(digitPins[1], HIGH);
+    showDigit(left);
+    digitalWrite(digitPins[0], LOW);
+    delay(5);
+    digitalWrite(digitPins[0], HIGH);
+
+    // หลักขวา
+    showDigit(right);
+    digitalWrite(digitPins[1], LOW);
+    delay(5);
+    digitalWrite(digitPins[1], HIGH);
+  }
+}
+
+void loop()
+{
+  displayPair(number[0], number[1], 1000); // โชว์ 6, 8
+  displayPair(number[2], number[3], 1000); // โชว์ 0, 7
+  displayPair(number[4], number[5], 1000); // โชว์ 0, 1
+  displayPair(number[6], number[7], 1000); // โชว์ 8, 1
+}

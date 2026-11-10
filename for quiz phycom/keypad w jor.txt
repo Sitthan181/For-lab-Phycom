@@ -1,0 +1,66 @@
+#include <LiquidCrystal_I2C.h>
+int keypadOut[4] = {11, 10, 9, 8};
+int keypadIn[4] = {7, 6, 5, 4};
+LiquidCrystal_I2C lcd(0x20, 16, 2);
+
+const char keyMap[4][4] = {
+  {'1', '2', '3', 'A'},
+  {'4', '5', '6', 'B'},
+  {'7', '8', '9', 'C'},
+  {'*', '0', '#', 'D'}
+};
+
+int i = 0, j = 0;
+
+void setup(){
+ 	for(int i = 0;i < 4;i++){
+  	pinMode(keypadIn[i], INPUT_PULLUP);
+    pinMode(keypadOut[i], OUTPUT);
+    digitalWrite(keypadOut[i], HIGH);
+  }
+  
+  lcd.init();
+  lcd.backlight();
+ }
+
+char scanKeypad() {
+  for (int r = 0; r < 4; r++) {
+    digitalWrite(keypadOut[r], LOW); // Drive active row LOW
+
+    for (int c = 0; c < 4; c++) {
+      if (digitalRead(keypadIn[c]) == LOW) { // Button pressed
+        delay(20); // Debounce
+        digitalWrite(keypadOut[r], HIGH);
+        return keyMap[r][c];
+      }
+    }
+    digitalWrite(keypadOut[r], HIGH); // Reset row
+  }
+  return 0;
+}
+
+void displayNumber(int number, int *cols, int *rows){
+  	if(*cols > 15){
+  		(*rows)++;
+      	(*cols) = 0;
+  	}
+  	lcd.setCursor((*cols)++, (*rows));
+  	lcd.print(number);
+  
+}
+
+void loop() {
+  char key = scanKeypad();
+
+  // If a number 0-9 was pressed, update the display
+  if (key >= '0' && key <= '9') {
+    displayNumber(key - '0', &i, &j);
+    delay(200);
+  }
+
+  if (key == 'C') {
+    lcd.clear();
+    i = 0;
+    j = 0;
+  }
+}

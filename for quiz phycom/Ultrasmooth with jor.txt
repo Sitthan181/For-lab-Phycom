@@ -1,0 +1,29 @@
+#include <LiquidCrystal_I2C.h>
+LiquidCrystal_I2C lcd(0x20, 16, 2);
+
+void setup(){
+  
+  Serial.begin(9600);
+  pinMode(2, OUTPUT);
+  pinMode(4, INPUT);
+  lcd.init();
+  lcd.backlight();
+  
+}
+
+void loop() {
+  
+  digitalWrite(2, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(2, LOW);
+  
+  double pulseWidth = pulseIn(4, HIGH);
+  double length = (0.0340) * pulseWidth/2;
+ 
+  lcd.setCursor(0, 0);
+  lcd.print("Length: ");
+  lcd.print((int) length);
+  lcd.print(" cm");
+  delay(400);
+  lcd.clear();
+}

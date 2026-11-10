@@ -1,0 +1,21 @@
+#include <Adafruit_LiquidCrystal.h>
+
+Adafruit_LiquidCrystal lcd(0);
+
+const int sensorPin = A0;
+
+void setup() {
+  lcd.begin(16, 2);
+  lcd.print("Temperature:");
+}
+
+void loop() {
+  int raw = analogRead(sensorPin);
+  float voltage = raw * 5.0 / 1024.0;            // แปลงเป็นแรงดัน (V)
+  float tempC = (voltage - 0.5) * 100.0;         // TMP36: 10 mV/°C, offset 0.5 V
+
+  lcd.setCursor(0, 1);
+  lcd.print(tempC, 2);
+  lcd.print(" C   ");
+  delay(500);
+}

@@ -1,0 +1,21 @@
+const int led1 = 3;
+const int led2 = 5;
+const int led3 = 6;
+const int led4 = 9;
+
+void setup() {
+  pinMode(led1, OUTPUT);
+  pinMode(led2, OUTPUT);
+  pinMode(led3, OUTPUT);
+  pinMode(led4, OUTPUT);
+}
+
+void loop() {
+  for (int t = 0; t < 256; t++) {
+    analogWrite(led1, t);            // ดับ -> ติด
+    analogWrite(led2, (2 * t) % 256);// ดับ -> ติด but X2 fast
+    analogWrite(led3, 255 - t);      // ติด -> ดับ
+    analogWrite(led4, 128 + t / 2);  // กึ่งติด -> ติด
+    delay(20);                       // ปรับความเร็ว
+  }
+}
